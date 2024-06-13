@@ -1,2 +1,18 @@
+DESARROLLADO POR:
 
-npm install 
+Jhon Alexander Diaz
+Nestor Jaime Alegria
+Luis Mateo Ortega
+
+Instrucciones para comenzar:
+
+Descarga el proyecto:
+Abre el proyecto en Visual Studio Code.
+
+Instalación de dependencias:
+Dirígete a la carpeta principal del proyecto.
+Ejecuta el siguiente comando en tu terminal:
+  npm install
+Este comando instalará todas las dependencias necesarias para que tu aplicación Ionic funcione correctamente.
+
+¡Ya estás listo para comenzar a desarrollar tu aplicación Ionic!
