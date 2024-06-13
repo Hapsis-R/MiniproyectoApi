@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Revisiones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Revisiones</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+    <ion-item *ngFor="let revisionItem of  (Revisiones | async)" (click)="seleccionarrevision(revisionItem.id)">
+      <ion-label>
+        <p><strong>Fecha</strong> {{revisionItem.fecha}}
+          <strong>Taller:</strong> {{revisionItem.taller}}
+          <strong>Mecanico:</strong> {{revisionItem.mecanico}}
+          <strong>Descripcion:</strong> {{revisionItem.descripcion}}
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="nuevaRevision()" routerDirection="forward">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+

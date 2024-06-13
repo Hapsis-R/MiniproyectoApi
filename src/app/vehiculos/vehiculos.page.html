@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Vehiculos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Vehiculos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/tabs/nuevovehiculo" routerDirection="forward">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-list>
+    <ion-item *ngFor="let v of vehiculos | async" (click)="seleccionarVehiculo(v)">
+      <ion-label>
+        <p><strong>Tipo</strong> {{v.tipo}} <strong>Placa:</strong> {{v.placa}} <strong>Año:</strong> {{v.anio}} <strong>Marca:</strong> {{v.marca}} <strong>Color:</strong> {{v.color}}</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
